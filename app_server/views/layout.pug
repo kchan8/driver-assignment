@@ -1,0 +1,66 @@
+doctype html
+html(lang='en', ng-app='jkcApp') 
+  head
+    meta(charset="utf-8")
+    base(href="/")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title= title
+    link(rel='stylesheet', href='//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css')
+    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/textAngular/1.5.16/textAngular.css')
+    //-link(rel='stylesheet', href='/bootstrap/css/united.bootstrap.min.css')
+    link(rel='stylesheet', href='/bootstrap/css/cerulean.bootstrap.min.css')
+    //- link(rel='stylesheet', href='/bootstrap/css/pick-a-color-1.2.3.min.css')
+    link(rel='stylesheet', href='/bootstrap/colorpicker/dist/css/bootstrap-colorpicker.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    //- putting javascript in head vs body:
+    //- https://www.tutorialspoint.com/javascript/javascript_placement.htm
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    //- script(src='/bootstrap/js/tinycolor-0.9.15.min.js')
+    //- script(src='/bootstrap/js/pick-a-color-1.2.3.min.js')
+    script(src='/bootstrap/colorpicker/dist/js/bootstrap-colorpicker.min.js')
+  //-body(ng-controller='bellCtrl')
+  body(ng-view)
+    //- top menu bar which will not be displayed in SPA
+    block content
+    script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    //- script(src='//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js')
+    script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js')
+    script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.js')
+    script(src='/lib/angular-route.min.js')
+    script(src='/lib/angular-sanitize.min.js')
+    script(src='/lib/ui-bootstrap-tpls-2.5.0.min.js')
+    
+    //- script(src='/angular/jkcApp.js')
+    //script(src='/angular/jkcApp.min.js')
+    //- need to put javascript with angular.module first
+    script(src='/appc.js')
+    
+    script(src='/common/directives/navigation/navigation.directive.js')
+    script(src='/common/directives/navigation/navigation.controller.js')
+    script(src='/common/directives/footerGeneric/footerGeneric.directive.js')
+    script(src='/common/services/authentication.service.js')
+    script(src='/common/services/fileUpload.service.js')
+    script(src='/common/services/email.service.js')
+
+    script(src='/auth/signup/signup.controller.js')
+    script(src='/auth/signup/confirm.controller.js')
+    script(src='/auth/login/login.controller.js')
+    script(src='/auth/login/forgotPassword.controller.js')
+    script(src='/auth/login/resetPassword.controller.js')
+
+    script(src='/home/home.controller.js')
+    script(src='/register/register.controller.js')
+    script(src='/roster/grades.controller.js')
+    script(src='/roster/schools.controller.js')
+    script(src='/roster/districts.controller.js')
+    script(src='/pickup/all.controller.js')
+    script(src='/auth/admin/email_by_grade.controller.js')
+    script(src='/auth/admin/email_by_school.controller.js')
+    script(src='/auth/admin/email_by_district.controller.js')
+    script(src='/auth/admin/upload.controller.js')
+    script(src='/auth/admin/export.controller.js')
+    script(src='/auth/admin/editUser.controller.js')
+    script(src='/auth/admin/removeUser.controller.js')

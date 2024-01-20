@@ -1,0 +1,29 @@
+<navigation></navigation>
+<div class="container">
+  <h3>Edit User</h3>
+  <div class="col-sm-12" style="text-align: center; margin: auto">
+    <span ng-repeat="rank in vm.allRanks">
+      <button style="border:1px solid black" class="btn {{ rank | removeSpace }}">{{rank}} ({{ vm.ranks[rank] }})</button>
+    </span>
+    <span><button style="border:1px solid black" class="btn">No Rank ({{ vm.ranks[""] }})</button></span>
+    <span style="font-weight: bold; position:relative; top: 2px">&nbsp;&nbsp;{{ vm.header.date | date }}</span>
+  </div>
+  
+  <div ng-repeat="patrol in vm.patrols | filter: {_id: '!ASM'} | filter: {_id: '!Parent'} | filter: {_id: ''}">
+    <div class="col-sm-4">
+    <div style="border:1px solid black; border-radius: 10px; margin: 10px 0 10px 0; padding: 10px">
+      <div style="text-align: center">
+        <span class="patrol-tag">{{ patrol._id }}</span>
+      </div>
+      <br/>
+      <button style="border:1px solid black; margin: 1px" class="btn {{ user.rank | removeSpace }}" ng-repeat="user in patrol.users">
+        <span class="name-tag" ng-click="vm.userinfo(user)">{{ user.name }}</span>
+      </button>
+    </div>
+    </div>
+  </div>
+  
+  
+  
+  <footer-generic></footer-generic>
+</div>

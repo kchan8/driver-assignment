@@ -1,0 +1,82 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+th{
+	border: 1px solid grey;
+	padding: 6px 6px 6px 6px;
+}
+
+td {
+	border: 1px solid grey;
+	padding: 1px 6px 3px 6px;
+}
+
+.patrol-tag {
+	font-weight: bold;
+	position: relative;
+	top:-1px;
+	font-size: 24px;
+}
+.name-tag {
+	position: relative;
+	top:-1px;
+}
+
+form .ng-invalid .ng-dirty {
+	background-color: lightpink;
+}
+form .ng-valid .ng-dirty {
+	background-color: lightgreen;
+}
+div .error {
+	color: red;
+	font-weight: bold;
+}
+
+.driverSelect {
+	-webkit-appearance: menulist-button;
+	border-radius: 10px;
+	height: 22px;
+	margin-top: 2px;
+}
+
+select {
+	padding: 2px;
+}
+
+.Grade-5th {
+	background-color: salmon;
+}
+.Grade-4th {
+	background-color: orange;
+}
+.Grade-3rd {
+	background-color: yellow;
+}
+.Grade-2nd {
+	background-color: lightgreen;
+}
+.Grade-1st {
+	background-color: lightblue;
+}
+.Grade-K {
+	background-color: plum;
+}
+.Grade-TK {
+	background-color: darkgray;
+}
+
+.Dublin {
+	background-color: #b9e0b8;
+}
+.Pleasanton {
+	background-color: #fbf2e9;
+}
+.Livermore {
+	background-color: #ededde;
+}

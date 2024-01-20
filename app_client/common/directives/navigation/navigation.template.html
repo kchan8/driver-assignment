@@ -1,0 +1,66 @@
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container">	
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#1.21">JKC</a>
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+		
+    <div class="navbar-collapse collapse" id="navbar-main">
+      <ul class="nav navbar-nav" id="main-menu-left">
+        <li><a href="/">Home</a></li>
+        <li><a href="/#!about">About Us</a></li>
+        <li><a href="/#!contact">Contact Us</a></li>
+        
+        <li ng-show="navvm.isAdmin() || navvm.isTeacher()" uib-dropdown on-toggle="toggled(open)">
+          <a uib-dropdown-toggle href="">Roster<span class="caret"></span></a>
+          <ul class="dropdown-menu" uib-dropdown-menu>
+            <li><a href="/#!roster/grades">Grades</a></li>
+            <li><a href="/#!roster/schools">Schools</a></li>
+            <li><a href="/#!roster/districts">Districts</a></li>
+          </ul>
+        </li>
+        
+        <li ng-show="navvm.isAdmin() || navvm.isTeacher()" uib-dropdown on-toggle="toggled(open)">
+          <a uib-dropdown-toggle href="">Email<span class="caret"></span></a>
+          <ul class="dropdown-menu" uib-dropdown-menu>
+            <li><a href="/#!admin/email/grades">Grades</a></li>
+            <li><a href="/#!admin/email/schools">Schools</a></li>
+            <li><a href="/#!admin/email/districts">Districts</a></li>
+          </ul>
+        </li>
+        
+        <li ng-show="navvm.isAdmin() || navvm.isTeacher()" >
+          <a href="/#!admin/pickup">Pickup</a>
+        </li>
+        
+        <li ng-show="navvm.isAdmin()" uib-dropdown on-toggle="toggled(open)">
+          <a uib-dropdown-toggle href="">Admin<span class="caret"></span></a>
+          <ul class="dropdown-menu" uib-dropdown-menu>
+            <li><a href="/#!admin/upload">Upload File</a></li>
+            <li><a href="/#!admin/export">Export File</a></li>
+            <li><a href="#" ng-click="navvm.addUser()">Add User</a></li>
+            <li><a href="/#!admin/edituser">Edit User</a></li>
+            <li><a href="/#!admin/removeuser">Remove User</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav pull-right">
+        <li ng-hide="navvm.isLoggedIn()"><a href="/#!login" >LOG IN</a></li>
+        <li ng-hide="navvm.isLoggedIn()"><a href="/#!signup">SIGN UP</a></li>
+        <li ng-show="navvm.isLoggedIn()" uib-dropdown on-toggle="toggled(open)">
+          <a uib-dropdown-toggle href="#">{{ navvm.currentUser().firstname }}<span class="caret"></span></a>
+          <ul class="dropdown-menu" uib-dropdown-menu>
+            <li ><a href="#" ng-click="navvm.profile(navvm.currentUser().id)"><b>Profile</b></a></li>
+            <li ng-repeat="child in navvm.getChildren()"><a href="" ng-click=" navvm.profile(child.id)">{{child.firstName}}</a></li>
+          </ul>
+        </li>
+        <li ng-show="navvm.isLoggedIn()"><a href="" ng-click="navvm.logout()">LOG OUT</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

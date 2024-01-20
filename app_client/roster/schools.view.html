@@ -1,0 +1,26 @@
+<navigation></navigation>
+<div class="container">
+  <h2>Schools</h2>
+  
+  <div class="col-sm-12" style="text-align: center; margin: auto">
+    <span ng-repeat="grade in vm.allGrades">
+      <button style="border:1px solid black" class="btn Grade-{{grade}}">{{grade}} ({{ vm.counts[grade] }})</button>
+    </span>
+    <span style="font-weight: bold; position:relative; top: 2px">&nbsp;&nbsp;{{ vm.header.date | date }} ({{ vm.total }})</span>
+  </div>
+  <div ng-repeat="school in vm.schools">
+    <div class="col-sm-4">
+    <div style="border:1px solid black; border-radius: 10px; margin: 10px 0 10px 0; padding: 10px">
+      <div style="text-align: center">
+        <span class="patrol-tag">{{ school._id }}</span>
+      </div>
+      <br/>
+      <span style="border:1px solid black; margin: 2px; padding: 2px; border-radius: 8px" class="btn Grade-{{user.grade}}" ng-repeat="user in school.users">
+        <button class="name-tag btn Grade-{{user.grade}}"  ng-click="vm.userinfo(user)"><b>{{ user.name }}</b></button>
+      </span>
+    </div>
+    </div>
+  </div>
+
+  <footer-generic></footer-generic>
+</div>

@@ -1,0 +1,64 @@
+<div class="modal-body" id="modal-body">
+
+  <div class="row">
+    <div class="col-xs-3">
+      <label class="control-label">First name</label>
+      <input type="text" class="form-control" ng-model="user.name.firstName" >
+    </div>
+    <div class="col-xs-3">
+      <label class="control-label">Last name</label>
+      <input type="text" class="form-control" ng-model="user.name.lastName" >
+    </div>
+    <div class="col-xs-4">
+      <label class="control-label">E-mail</label>
+      <input type="text" class="form-control" ng-model="user.email" >
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-3">
+      <label class="control-label">Home phone</label>
+      <input type="text" class="form-control" ng-model="user.homePhone" >
+    </div>
+    <div class="col-xs-3">
+      <label class="control-label">Cell phone</label>
+      <input type="text" class="form-control" ng-model="user.cellPhone" >
+    </div>
+    <div class="col-xs-3">
+      <label class="control-label">Work phone</label>
+      <input type="text" class="form-control" ng-model="user.workPhone">
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-xs-4">
+      <label class="control-label">Street</label>
+      <input type="text" class="form-control" ng-model="user.address" >
+    </div>
+    <div class="col-xs-2">
+      <label class="control-label">City</label>
+      <input type="text" class="form-control" ng-model="user.city" >
+    </div>
+    <div class="col-xs-2">
+      <label class="control-label">Zip</label>
+      <input type="text" class="form-control" ng-model="user.zip" >
+    </div>
+  </div>
+  
+  <div class="row" ng-if="user.userType.indexOf('Student') != -1">
+    <div class="col-xs-6">
+      <label class="control-label">School</label>
+      <input type="text" class="form-control" ng-model="user.school" >
+    </div>
+    <div class="col-xs-1">
+      <label class="control-label">Grade</label>
+      <input type="text" class="form-control" ng-model="user.grade" >
+    </div>
+    
+  </div>
+
+</div>
+<div class="modal-footer">
+  <button class="btn btn-primary" type="button" ng-click="update()">Update</button>
+  <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+</div>

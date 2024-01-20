@@ -1,0 +1,30 @@
+<navigation></navigation>
+<div class="container">
+  <h2><p ng-bind-html="vm.header.title"></p></h2>
+  <div ng-show="vm.isLoggedIn()">
+    <button class="btn btn-info" ng-click="vm.bell()">Bell</button>
+  </div>
+  <table border="1">
+    <tr>
+      <th>Options</th>
+      <th>1st - 6th Grade</th>
+      <th>Kindergarten</th>
+    </tr>
+    <tr>
+      <td>Full Time</td>
+      <td>$460</td>
+      <td>$520</td>
+    </tr>
+    <tr>
+      <td>4 Days per Week</td>
+      <td>$400</td>
+      <td>$470</td>
+    </tr>
+    <tr>
+      <td>3 Days per Week</td>
+      <td>$350</td>
+      <td>$420</td>
+    </tr>
+  </table>
+  <footer-generic></footer-generic>
+</div>
